@@ -15,6 +15,7 @@ export class ServerComponent {
 	serverCreationStatus = 'No server was created'
 	serverId: number = 10
 	serverStatus: string = 'offline'
+	servers = ['Test', 'Test2']
 
 	/**
 	 *
@@ -26,6 +27,7 @@ export class ServerComponent {
 		}, 2000)
 	}
 	onCreateServer() {
+		this.servers.push(this.serverName)
 		if (this.serverName.length == 0) {
 			this.serverCreated = false
 		} else {

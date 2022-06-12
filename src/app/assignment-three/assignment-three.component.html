@@ -1,0 +1,16 @@
+<p>assignment-three works!</p>
+
+<button class="btn btn-primary" (click)="showDetails()">Display Details</button>
+<p [ngStyle]="{display: displayDetails === true ? 'block' : 'none'}">
+    Secret Password = 'Tuna' 
+</p>
+<p *ngFor="let click of buttonClicks">
+    <span *ngIf="click >= 5; else minorFive">
+        <span [ngStyle]="{backgroundColor: 'blue'}"  ngClass="fuente">
+            Try No. {{click}}
+        </span>
+    </span>
+    <ng-template #minorFive>
+        <span>Try No. {{click}}</span>
+    </ng-template>
+</p>
